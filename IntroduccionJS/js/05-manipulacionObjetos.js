@@ -28,3 +28,27 @@ delete producto.precio;
 
 Object.seal(producto);
 //Object seal permite modificar las propiedades existentes pero no permite añadir ni eliminar propiedades
+
+const persona = {
+    nombre: "Josue",
+    apellidos: "Martínez Carrasco",
+    edad: 39,
+    domicilio: {
+        calle: "Calle 123",
+        numero: "123",
+        colonia: "Colonia 123"
+    }
+}
+
+console.table(persona.domicilio);
+
+//  Object.freeze(persona.domicilio);
+
+persona.domicilio.calle = "Juan de Dios Peza"
+persona.domicilio.cp = "50220"
+
+console.table(persona.domicilio)
+
+persona.domicilio.cp = "53456"
+console.table(persona.domicilio)
+
